@@ -19,25 +19,36 @@ LTI es un sistema de seguimiento de talento desarrollado con TypeScript. El fron
 La estructura de directorios del proyecto es la siguiente:
 
 ```
-backend/
-└── src/
-    ├── application/
-    │   ├── dto/
-    │   └── use-cases/
-    ├── domain/
-    │   ├── entities/
-    │   ├── repositories/
-    │   ├── services/
-    │   └── value-objects/
-    ├── infrastructure/
-    │   ├── persistence/
-    │   └── services/
-    └── interfaces/
-        ├── cli/
-        └── http/
+LTI-ATS/
+├── backend/
+│   └── src/
+│       ├── application/
+│       │   ├── dto/
+│       │   └── use-cases/
+│       ├── domain/
+│       │   ├── entities/
+│       │   ├── repositories/
+│       │   ├── services/
+│       │   └── value-objects/
+│       ├── infrastructure/
+│       │   ├── persistence/
+│       │   └── services/
+│       └── interfaces/
+│           ├── cli/
+│           └── http/
+├── frontend/
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── services/
+│       └── utils/
+└── .gitignore
 ```
 
 ### Descripción de Directorios
+
+#### Backend
 
 - **application/**: Contiene la lógica de aplicación y casos de uso.
   - **dto/**: Objetos de transferencia de datos.
@@ -56,6 +67,15 @@ backend/
 - **interfaces/**: Define cómo los usuarios y otros sistemas interactúan con la aplicación.
   - **cli/**: Interfaces de línea de comandos.
   - **http/**: APIs HTTP.
+
+#### Frontend
+
+- **public/**: Archivos públicos estáticos.
+- **src/**: Código fuente del frontend.
+  - **components/**: Componentes reutilizables de React.
+  - **pages/**: Páginas de la aplicación.
+  - **services/**: Servicios para interactuar con APIs.
+  - **utils/**: Utilidades y funciones auxiliares.
 
 ## Archivos en `.gitignore`
 
@@ -122,13 +142,23 @@ El archivo `tsconfig.json` contiene la configuración de TypeScript:
 
 ## Ejecución del Proyecto
 
-Para iniciar el proyecto en modo desarrollo, usa el siguiente comando:
+### Backend
+
+Para iniciar el backend en modo desarrollo, usa el siguiente comando:
 
 ```sh
 npm run dev
 ```
 
-Para iniciar el proyecto en modo producción, usa el siguiente comando:
+Para iniciar el backend en modo producción, usa el siguiente comando:
+
+```sh
+npm start
+```
+
+### Frontend
+
+Para iniciar el frontend en modo desarrollo, usa el siguiente comando:
 
 ```sh
 npm start
